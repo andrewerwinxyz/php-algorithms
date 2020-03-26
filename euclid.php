@@ -17,20 +17,4 @@ function euclid($a, $b)
     goto a;
     c:
     print($a);
-
 }
-
-/*
-A leaner way would be something like this:
-
-function Euclid($a, $b)
-{
-    do while($b > 0)
-    {
-        $b -= $a
-        $a -= $b
-
-        return $a
-    }
-}
-*/
