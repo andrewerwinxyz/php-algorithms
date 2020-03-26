@@ -5,7 +5,7 @@ Euclid's algorithm to find the greatest common divisor of two numbers
 This is the ugly way intended to show the original algorithm
 */
 
-function Euclid($a, $b)
+function euclid($a, $b)
 {
     a:
     if($b == 0) goto c;

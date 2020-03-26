@@ -1,7 +1,7 @@
 <?php
 
 /*
-Simple Bubble Sort 
+Simple bubble sort 
 This isn't meant to be efficient, but to show how bubble sort works
 */
 
