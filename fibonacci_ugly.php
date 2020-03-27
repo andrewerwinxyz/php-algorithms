@@ -9,8 +9,7 @@ If you run this as is, it will get to INF very quickly and just keep going.
 function fibonacciSequence()
 {
     $x = 1;
-    $y = 0;
-    $fib = 0;
+    $y = $fib = 0;
     a:
     print($fib);
     $fib = $x + $y;
