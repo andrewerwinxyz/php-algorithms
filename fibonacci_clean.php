@@ -28,5 +28,5 @@ function fib()
 
 foreach(loop(10000, fib()) as $item)
 {
-    echo $item, PHP_EOL;
+    print($item);
 }
