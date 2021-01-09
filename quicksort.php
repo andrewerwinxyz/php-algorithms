@@ -1,14 +1,19 @@
 <?php
 
-/*
-This only works with an array of more than 1 number!
-*/
+$array = [34,2,6,57,0,4,45];
+$array = quickSort($array);
+echo implode(',', $array);
 
 function quickSort($input)
- {
+{
     $lessThan = [];
     $greaterThan = [];
-    
+
+	if(count($input) < 2)
+	{
+		return $input;
+	}
+
 	$key = key($input);
     $shift = array_shift($input);
     
@@ -18,7 +23,7 @@ function quickSort($input)
 		{
 			$lessThan[] = $value;
         }
-        elseif ($value > $shift)
+        elseif($value > $shift)
 		{
 			$greaterThan[] = $value;
 		}
