@@ -1,25 +1,25 @@
 <?php
 
-/*
-Simple bubble sort 
-This isn't meant to be efficient, but to show how bubble sort works
-*/
+$array = [34,2,6,57,0,4,45];
+$array = bubbleSort($array);
+echo implode(',', $array);
 
- function bubbleSort($a, $b)
- {
-     for($i = sizeof($a); $i >= 1; $i--)
-     {
-        for($j = 1; $j <= $i; $j++)
+function bubbleSort($input)
+{
+    do
+    {
+        $swapped = false;
+
+        for($i = 0, $count = count($input) - 1; $i < $count; $i++)
         {
-            if($a[$j - 1] > $a[$j])
+            if($input[$i] > $input[$i + 1])
             {
-                $x = $a[$j - 1];
-                $y = $b[$j - 1];
-                $a[$j - 1] = $a[$j];
-                $b[$j - 1] = $b[$j];
-                $a[$j] = $x;
-                $b[$j] = $y;
+                list($input[$i + 1], $input[$i]) = [$input[$i], $input[$i + 1]];
+                $swapped = true;
             }
         }
-     }
- }
+    }
+    while($swapped);
+
+    return $input;
+}
